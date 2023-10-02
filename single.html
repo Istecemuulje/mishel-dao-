@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Homemade+Apple&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../mishel-dao--main/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container--All">
+        <div class="nav">
+          <div class="logo">
+            <h1>logo</h1>
+          </div>
+          <div class="nav__Bar">
+            <ul class="navLinks">
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Pricing</a></li>
+            </ul>
+            <div class="navButton">
+              <a href="">Contact Us</a>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- hero start -->
+    <div class="hero--single">
+      <div class="blog--container">
+        <div class="hero-Titles">
+          <div class="hero__Title">
+            <h1>
+              How we perform long-<br />running tasks using AWS<br />
+              services
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- hero end -->
+    <!-- single blog start -->
+    <div class="blog">
+      <div class="blog--container">
+        <div class="blog__meta">
+          <div class="person">
+            <img
+              class="person__image"
+              src="../mishel-dao--main/slike/Ellipse 15.svg"
+              alt=""
+            />
+            <div class="person__info">
+              <p>Renee Wells</p>
+              <p>Product Designer, Quotient</p>
+            </div>
+          </div>
+          <div class="blogMeta">
+            <p>10 min read November 10, 2023</p>
+          </div>
+        </div>
+        <div class="blog__img">
+          <img src="../mishel-dao--main/slike/Rectangle 44.png" alt="" />
+        </div>
+        <p class="blog__text">
+          Depending on the input, this can result in using a lot of processing
+          power and time. The whole process would take approximately 5 seconds
+          to return a result to the client. Keep in mind we’re talking about 1
+          item, a contact from a contact book. After a while, a new requirement
+          is added. Solution must support companies that manage their contacts
+          organized in files. We agreed to develop a web application that would
+          support upload of dataset files, like .csv. The new web application
+          should support third party integrations. Some of them are the ESP/CRM
+          services, like Mailchimp. User does not need to see the result
+          immediately. System can later notify the user about the result, when
+          the process finishes. This information is the key that we need to
+          leverage on when developing our solution. So here’s how we did it.
+        </p>
+
+        <h3 class="blog__title">Initial approach</h3>
+
+        <p class="blog__text">
+          Our initial approach went like this: The web application would read a
+          .csv file line-by-line and submit an array of entries to the backend
+          REST API. Processing is in real time, immediately after the user makes
+          a request for the process to start, he expects a result. Another
+          approach is to apply vertical scaling to AWS architecture. Meaning we
+          used larger, more expensive instances that have more RAM and
+          processing power. This system worked well for smaller datasets, maybe
+          up to 5k entries, but for larger datasets multiple problems arose.
+          This solution is prone to failure due to long request time. Also,
+          because of some 3rd party services that aren’t optimized for large
+          scale loads or they don’t have batch endpoints. 3rd party services
+          also tend to protect their architecture from making a huge bill on
+          their end. The whole process was done in real-time. The request can
+          take a lot of time hanging in there while the backend would do all the
+          work and return the result to the client. The request was limited to
+          300 seconds (at time of writing the article) before AWS would cancel
+          it… Also I need to mention that the user has to wait a few minutes to
+          see the results. They can’t use the app during the process, which
+          makes for a bad user experience.
+        </p>
+      </div>
+    </div>
+    <!-- single blog end -->
+    <!-- footer start -->
+    <div class="footer">
+      <div class="container--All">
+        <div class="footer-wraper">
+          <div class="footer-heading">
+            <div class="footer__titles">
+              <h2 class="footerTitle">Think beyond the wave</h2>
+              <p class="footerSubTitle">
+                Ask about Sans products, pricing, implementation, or anything<br />
+                else. Our highly trained reps are standing by, ready to help
+              </p>
+            </div>
+            <div class="footer__button">
+              <form action="">
+                <input
+                  class="black--button"
+                  id="header-button"
+                  type="button"
+                  value="Try for free"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer__Logo">
+              <div class="logo">
+                <h1>logo</h1>
+              </div>
+              <p class="footer__text">
+                We built an elegant solution. Our team
+                <br />created a fully integrated sales and <br />marketing
+                solution for SMBs
+              </p>
+            </div>
+            <div class="footer__Links">
+              <div id="footer-link">
+                <h3 class="footer-links-heading">Company</h3>
+                <ul class="footer-links-list">
+                  <li class="footer-link"><a href="">About</a></li>
+                  <li class="footer-link"><a href="">Pricing</a></li>
+                  <li class="footer-link"><a href="">Jobs</a></li>
+                  <li class="footer-link"><a href="">Blog</a></li>
+                </ul>
+              </div>
+              <!-- --------------------------------- -->
+              <div id="footer-link">
+                <h3 class="footer-links-heading">Product</h3>
+                <ul class="footer-links-list">
+                  <li class="footer-link"><a href="">Sales Software</a></li>
+                  <li class="footer-link"><a href="">Marketplace</a></li>
+                  <li class="footer-link"><a href="">Terms & Conditions</a></li>
+                  <li class="footer-link"><a href="">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <!-- --------------------------------- -->
+              <div id="footer-link">
+                <h3 class="footer-links-heading">Discover</h3>
+                <ul class="footer-links-list">
+                  <li class="footer-link"><a href="">CRM Comparision</a></li>
+                  <li class="footer-link"><a href="">Partner Program</a></li>
+                  <li class="footer-link"><a href="">What is CRM</a></li>
+                  <li class="footer-link"><a href="">Resource</a></li>
+                </ul>
+              </div>
+              <!-- --------------------------------- -->
+              <div id="footer-link">
+                <h3 class="footer-links-heading">Help Center</h3>
+                <ul class="footer-links-list">
+                  <li class="footer-link"><a href="">Community</a></li>
+                  <li class="footer-link"><a href="">Knowledge Base</a></li>
+                  <li class="footer-link"><a href="">Academy</a></li>
+                  <li class="footer-link"><a href="">Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-rights">
+            <p>&copy; Copyright 2023 All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
